@@ -92,7 +92,7 @@
                                             <th>Nama Barang</th>
                                             <th>Tanggal Beli</th>
                                             <th>Kondisi</th>
-                                            <th>Lokasi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -117,9 +117,10 @@
                                                     </p>
                                                 </td>
                                                 <td class="col-auto">
-                                                    <p class=" mb-0">
-                                                        {{ $asset->lokasi->nama }}
-                                                    </p>
+                                                    <a href="#" class="btn icon btn-warning"><i
+                                                            class="bi bi-pencil"></i></a>
+                                                    <a href="#" class="btn icon btn-danger"><i
+                                                            class="bi bi-trash"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach

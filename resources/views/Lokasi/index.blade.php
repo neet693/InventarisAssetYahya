@@ -97,6 +97,7 @@
                                             <th>Nama Lokasi</th>
                                             <th>Unit</th>
                                             <th>Jumlah Asset</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -119,6 +120,12 @@
                                                     <p class=" mb-0">
                                                         {{ $lokasi->assets->count() }}
                                                     </p>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <a href="#" class="btn icon btn-warning"><i
+                                                            class="bi bi-pencil"></i></a>
+                                                    <a href="#" class="btn icon btn-danger"><i
+                                                            class="bi bi-trash"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach

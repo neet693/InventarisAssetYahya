@@ -96,68 +96,66 @@
                     </div>
                 </div>
                 <div class="row">
-                    {{-- Latest Asset --}}
-                    <div class="col-12 col-xl-12">
+                    {{-- Asset Terbaru --}}
+                    <div class="col col-xl-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Latest Assets</h4>
-                                <a href="#" class="btn icon btn-success"
-                                    style="display: flex inline-flex; justify-items: end"><i class="bi bi-plus"></i></a>
+                                <h4>Asset Terbaru</h4>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-lg">
-                                        <thead>
+                                <table class="table table-striped" id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama Barang</th>
+                                            <th>Tanggal Beli</th>
+                                            <th>Kondisi</th>
+                                            <th>Lokasi</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($assets as $asset)
                                             <tr>
-                                                <th>Nama Barang</th>
-                                                <th>Tanggal Beli</th>
-                                                <th>Kondisi</th>
-                                                <th>Lokasi</th>
-                                                <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($assets as $asset)
-                                                <tr>
-                                                    <td class="col-3">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar avatar-md">
-                                                                <img src="{{ asset('dist/assets/images/faces/5.jpg') }}">
-                                                            </div>
-                                                            <p class="font-bold ms-3 mb-0">{{ $asset->nama }}
+                                                <td class="col-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="{{ asset('dist/assets/images/faces/5.jpg') }}">
                                                         </div>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">
-                                                            {{ $asset->tanggal_pembelian->format('d M Y') }}
-                                                        </p>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">
-                                                            {{ $asset->kondisi }}
-                                                        </p>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <p class=" mb-0">
-                                                            {{ $asset->lokasi->nama }}
-                                                        </p>
-                                                    </td>
-                                                    <td class="col-auto">
-                                                        <a href="#" class="btn icon btn-warning"><i
-                                                                class="bi bi-pencil"></i></a>
-                                                        <a href="#" class="btn icon btn-danger"><i
-                                                                class="bi bi-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                        <p class="font-bold ms-3 mb-0">{{ $asset->nama }}
+                                                    </div>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <p class=" mb-0">
+                                                        {{ $asset->tanggal_pembelian->format('d M Y') }}
+                                                    </p>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <p class=" mb-0">
+                                                        {{ $asset->kondisi }}
+                                                    </p>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <p class=" mb-0">
+                                                        {{ $asset->lokasi->nama }}
+                                                    </p>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <a href="#" class="btn icon btn-warning"><i
+                                                            class="bi bi-pencil"></i></a>
+                                                    <a href="#" class="btn icon btn-danger"><i
+                                                            class="bi bi-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
+                    {{-- End Asset Terbaru --}}
                 </div>
             </div>
+            {{-- Bagian Kanan --}}
             <div class="col-12 col-lg-3">
                 <div class="card">
                     <div class="card-body py-4 px-4">
@@ -204,6 +202,7 @@
                     </div>
                 </div>
             </div>
+            {{-- Akhir Bagian Kanan --}}
         </section>
     </div>
 @endsection

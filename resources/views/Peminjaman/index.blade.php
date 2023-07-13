@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- End Latest Lokasi --}}
+                    {{-- End Latest Peminjaman --}}
                 </div>
             </div>
             <div class="col-12 col-lg-3">
