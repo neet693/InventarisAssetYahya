@@ -3,6 +3,9 @@
 
 <script src="{{ asset('dist/assets/extensions/jquery/jquery.min.js') }}"></script>
 <script src="{{ url('https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js') }}"></script>
+
+<script src="{{ asset('dist/assets/extensions/choices.js/public/assets/scripts/choices.js') }}"></script>
+<script src="{{ asset('dist/assets/js/pages/form-element-select.js') }}"></script>
 <!-- Need: Apexcharts -->
 <script src="{{ asset('dist/assets/extensions/apexcharts/apexcharts.min.js') }}"></script>
 <script src="{{ asset('dist/assets/js/pages/datatables.js') }}"></script>

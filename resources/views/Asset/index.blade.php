@@ -103,6 +103,12 @@
                                 <h4>Asset Terbaru</h4>
                             </div>
                             <div class="card-body">
+                                <!-- Button trigger for login form modal -->
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#inlineForm">
+                                    Launch Modal
+                                </button>
+                                @include('Modals.modal-add')
                                 <table class="table table-striped" id="table1">
                                     <thead>
                                         <tr>
