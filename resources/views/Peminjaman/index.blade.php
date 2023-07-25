@@ -118,6 +118,8 @@
                             </div>
                         </div>
                     </div>
+                    @include('Modals.Peminjamans.modal-add')
+                    @include('Modals.Peminjamans.modal-edit')
                     {{-- End Latest Peminjaman --}}
                 </div>
             </div>

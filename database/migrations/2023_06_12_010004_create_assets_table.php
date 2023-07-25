@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('kode');
             $table->date('tanggal_pembelian');
             $table->text('deskripsi');
-            $table->string('kondisi');
+            $table->enum('kondisi', ['baik', 'perlu pemeliharaan', 'rusak'])->default('baik');
             $table->foreignId('jenis_assets_id')->constrained()->onDelete('cascade');
             $table->foreignId('lokasi_id')->constrained()->onDelete('cascade');
             $table->foreignId('unit_id')->constrained()->onDelete('cascade');

@@ -129,6 +129,8 @@
                             </div>
                         </div>
                     </div>
+                    @include('Modals.Pemeliharaans.modal-add')
+                    @include('Modals.Pemeliharaans.modal-edit')
                     {{-- End Latest Lokasi --}}
                 </div>
             </div>

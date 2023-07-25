@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Unit</h6>
-                                        <h6 class="font-extrabold mb-0">{{ $units }}</h6>
+                                        <h6 class="font-extrabold mb-0">{{ $units->count() }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Lokasi</h6>
-                                        <h6 class="font-extrabold mb-0">{{ $lokasis }}</h6>
+                                        <h6 class="font-extrabold mb-0">{{ $lokasis->count() }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Jenis Asset</h6>
-                                        <h6 class="font-extrabold mb-0">{{ $jenis_assets }}</h6>
+                                        <h6 class="font-extrabold mb-0">{{ $jenis_assets->count() }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -105,10 +105,9 @@
                             <div class="card-body">
                                 <!-- Button trigger for login form modal -->
                                 <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                                    data-bs-target="#inlineForm">
-                                    Launch Modal
+                                    data-bs-target="#exampleModalScrollable">
+                                    <i class="bi bi-bag-plus-fill"></i>
                                 </button>
-                                @include('Modals.modal-add')
                                 <table class="table table-striped" id="table1">
                                     <thead>
                                         <tr>
@@ -146,8 +145,10 @@
                                                     </p>
                                                 </td>
                                                 <td class="col-auto">
-                                                    <a href="#" class="btn icon btn-warning"><i
-                                                            class="bi bi-pencil"></i></a>
+                                                    <button type="button" class="btn icon btn-warning"
+                                                        data-bs-toggle="modal" data-bs-target="#editModalScrollable">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </button>
                                                     <a href="#" class="btn icon btn-danger"><i
                                                             class="bi bi-trash"></i></a>
                                                 </td>
@@ -158,6 +159,8 @@
                             </div>
                         </div>
                     </div>
+                    @include('Modals.Assets.modal-add')
+                    @include('Modals.Assets.modal-edit')
                     {{-- End Asset Terbaru --}}
                 </div>
             </div>
@@ -194,7 +197,7 @@
                             </div>
                         @endforeach
                         <div class="px-4">
-                            <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>STambah
+                            <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Tambah
                                 Peminjam</button>
                         </div>
                     </div>

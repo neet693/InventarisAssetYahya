@@ -16,12 +16,11 @@ class AssetController extends Controller
      */
     public function index()
     {
-        //
-        $units = Unit::count();
-        $lokasis = Lokasi::count();
-        $jenis_assets = JenisAsset::count();
+        $units = Unit::all();
+        $lokasis = Lokasi::all();
+        $jenis_assets = JenisAsset::all();
         $peminjamans = Peminjaman_Asset::orderBy('created_at', 'desc')->take(5)->get();
-        $assets = Asset::latest()->take(7)->get();
+        $assets = Asset::latest()->get();
         return view('Asset.index', compact('units', 'lokasis', 'jenis_assets', 'peminjamans', 'assets'));
     }
 

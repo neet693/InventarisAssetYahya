@@ -19,8 +19,8 @@ class AssetFactory extends Factory
             'kode' => $this->faker->unique()->randomNumber,
             'tanggal_pembelian' => $this->faker->date,
             'deskripsi' => $this->faker->paragraph,
-            'kondisi' => $this->faker->randomElement(['Baik', 'Rusak', 'Perlu Pemeliharaan']),
-            'jenis_assets_id'=> JenisAsset::inRandomOrder()->first()->id,
+            'kondisi' => $this->faker->randomElement(['baik', 'perlu pemeliharaan', 'rusak']),
+            'jenis_assets_id' => JenisAsset::inRandomOrder()->first()->id,
             'lokasi_id' => Lokasi::inRandomOrder()->first()->id,
             'unit_id' => Unit::inRandomOrder()->first()->id,
         ];
