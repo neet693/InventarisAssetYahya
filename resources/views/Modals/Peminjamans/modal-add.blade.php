@@ -47,7 +47,7 @@
                                             Rusak</option>
                                     </select>
                                 </div>
-                                <label>Jenis Barang / Asset: </label>
+                                {{-- <label>Jenis Barang / Asset: </label>
                                 <div class="form-group">
                                     <select class="choices form-select multiple-remove" multiple="multiple">
                                         <optgroup label="Jenis Asset">
@@ -58,8 +58,8 @@
                                             @endforeach
                                         </optgroup>
                                     </select>
-                                </div>
-                                <label>Lokasi Barang / Asset: </label>
+                                </div> --}}
+                                {{-- <label>Lokasi Barang / Asset: </label>
                                 <div class="form-group">
                                     <select class="choices form-select multiple-remove" multiple="multiple">
                                         <optgroup label="Jenis Asset">
@@ -69,8 +69,8 @@
                                             @endforeach
                                         </optgroup>
                                     </select>
-                                </div>
-                                <label>Unit: </label>
+                                </div> --}}
+                                {{-- <label>Unit: </label>
                                 <div class="form-group">
                                     <select class="choices form-select multiple-remove" multiple="multiple">
                                         <optgroup label="Unit">
@@ -81,7 +81,7 @@
                                             @endforeach
                                         </optgroup>
                                     </select>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">

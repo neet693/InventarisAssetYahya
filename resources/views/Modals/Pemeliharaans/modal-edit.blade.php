@@ -33,7 +33,7 @@
                                 <div class="form-group">
                                     <input type="text" placeholder="Tambah deskripsi" class="form-control">
                                 </div>
-                                <label>Kondisi Barang / Asset: </label>
+                                {{-- <label>Kondisi Barang / Asset: </label>
                                 <div class="form-group">
                                     <select class="choices form-select multiple-remove">
                                         <option value="baik" {{ old('kondisi') === 'baik' ? 'selected' : '' }}>
@@ -81,7 +81,7 @@
                                             @endforeach
                                         </optgroup>
                                     </select>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
