@@ -16,13 +16,13 @@ class PeminjamanAssetSeeder extends Seeder
     {
         $assets = Asset::all();
 
-        foreach($assets as $asset){
+        foreach ($assets as $asset) {
             Peminjaman_Asset::create([
                 'asset_id' => $asset->id,
                 'tanggal_peminjaman' => '2023-01-01',
                 'nama_peminjam' => 'John Doe',
                 'tanggal_pengembalian' => '2023-01-10',
-                'status_peminjaman' => 'Dikembalikan',
+                'status_peminjaman' => 'dikembalikan',
             ]);
         }
     }

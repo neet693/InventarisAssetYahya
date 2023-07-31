@@ -21,7 +21,7 @@ class Peminjaman_AssetFactory extends Factory
             'tanggal_peminjaman' => $this->faker->date,
             'nama_peminjam' => $this->faker->name,
             'tanggal_pengembalian' => $this->faker->date,
-            'status_peminjaman' => $this->faker->randomElement(['Dipinjam', 'Dikembalikan']),
+            'status_peminjaman' => $this->faker->randomElement(['dipinjam', 'dikembalikan']),
         ];
     }
 }

@@ -6,7 +6,8 @@
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal Form Tambah Asset</h5>
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal Form Tambah Pemeliharaan Barang /
+                            Asset</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <i data-feather="x"></i>
                         </button>
@@ -14,74 +15,28 @@
                     <div class="modal-body">
                         <form action="#">
                             <div class="modal-body">
-                                <label>Nama Barang / Asset: </label>
-                                <div class="form-group">
-                                    <input type="text" id="nama" name="nama" placeholder="Nama Barang"
-                                        class="form-control">
-                                </div>
-                                <label>Kode Barang / Asset: </label>
-                                <div class="form-group">
-                                    <input type="text" id="kode" name="kode" placeholder="Kode Barang"
-                                        class="form-control">
-                                </div>
-                                <label>Tanggal Pembelian: </label>
-                                <div class="form-group">
-                                    <input type="date" class="form-control mb-3 flatpickr-no-config"
-                                        placeholder="Pilih Tanggal Beli" />
-                                </div>
-                                <label>Deskripsi: </label>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Tambah deskripsi" class="form-control">
-                                </div>
-                                {{-- <label>Kondisi Barang / Asset: </label>
-                                <div class="form-group">
-                                    <select class="choices form-select multiple-remove">
-                                        <option value="baik" {{ old('kondisi') === 'baik' ? 'selected' : '' }}>
-                                            Baik
-                                        </option>
-                                        <option value="perlu pemeliharaan"
-                                            {{ old('kondisi') === 'perlu pemeriharaan' ? 'selected' : '' }}>
-                                            Perlu Pemeliharaan
-                                        </option>
-                                        <option value="rusak" {{ old('kondisi') === 'rusak' ? 'selected' : '' }}>
-                                            Rusak</option>
-                                    </select>
-                                </div>
                                 <label>Jenis Barang / Asset: </label>
                                 <div class="form-group">
-                                    <select class="choices form-select multiple-remove" multiple="multiple">
-                                        <optgroup label="Jenis Asset">
-                                            @foreach ($jenis_assets as $jenis_asset)
-                                                <option value="{{ $jenis_asset->id }}"selected>
-                                                    {{ $jenis_asset->nama }}
+                                    <select class="choices form-select multiple-remove">
+                                        <optgroup label="Nama Barang / Asset">
+                                            @foreach ($assets as $asset)
+                                                <option value="{{ $asset->id }}"selected>
+                                                    {{ $asset->nama }}
                                                 </option>
                                             @endforeach
                                         </optgroup>
                                     </select>
                                 </div>
-                                <label>Lokasi Barang / Asset: </label>
+                                <label>Jadwal Pemeliharaan: </label>
                                 <div class="form-group">
-                                    <select class="choices form-select multiple-remove" multiple="multiple">
-                                        <optgroup label="Jenis Asset">
-                                            @foreach ($lokasis as $lokasi)
-                                                <option value="{{ $lokasi->id }}"selected>{{ $lokasi->nama }}
-                                                </option>
-                                            @endforeach
-                                        </optgroup>
-                                    </select>
+                                    <input type="date" class="form-control mb-3 flatpickr-no-config"
+                                        placeholder="Pilih Tanggal Pemeliharaan" />
                                 </div>
-                                <label>Unit: </label>
+                                <label>Riwayat Pemeliharaan: </label>
                                 <div class="form-group">
-                                    <select class="choices form-select multiple-remove" multiple="multiple">
-                                        <optgroup label="Unit">
-                                            @foreach ($units as $unit)
-                                                <option value="{{ $unit->id }}"selected>
-                                                    {{ $unit->nama }}
-                                                </option>
-                                            @endforeach
-                                        </optgroup>
-                                    </select>
-                                </div> --}}
+                                    <input type="text" placeholder="Tuliskan Deskripsi Pemeliharaan disini"
+                                        class="form-control">
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">

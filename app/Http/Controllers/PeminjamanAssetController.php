@@ -16,11 +16,13 @@ class PeminjamanAssetController extends Controller
      */
     public function index()
     {
-        $peminjamans = Peminjaman_Asset::latest()->take(7)->get();
+        $peminjamans = Peminjaman_Asset::all();
         $assetKembali = Peminjaman_Asset::where('status_peminjaman', 'like', '%Dikembalikan%')->take(7)->get();
         $assetPinjam = Peminjaman_Asset::where('status_peminjaman', 'like', '%Dipinjam%')->get();
-        $assets = Asset::orderBy('created_at', 'desc')->take(5)->get();
-        return view('Peminjaman.index', compact('peminjamans', 'assets', 'assetPinjam', 'assetKembali'));
+        // $assets = Asset::orderBy('created_at', 'desc')->take(5)->get();
+        $assets = Asset::all();
+        $units = Unit::all();
+        return view('Peminjaman.index', compact('peminjamans', 'assets', 'assetPinjam', 'assetKembali', 'units'));
     }
 
     /**

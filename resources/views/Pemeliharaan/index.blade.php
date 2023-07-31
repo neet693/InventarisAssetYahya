@@ -86,6 +86,10 @@
                                 <h4>Pemeliharaan Asset Terkini</h4>
                             </div>
                             <div class="card-body">
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalScrollable">
+                                    <i class="bi bi-bag-plus-fill"></i>
+                                </button>
                                 <table class="table table-striped" id="table1">
                                     <thead>
                                         <tr>
@@ -117,8 +121,10 @@
                                                     </p>
                                                 </td>
                                                 <td class="col-auto">
-                                                    <a href="#" class="btn icon btn-warning"><i
-                                                            class="bi bi-pencil"></i></a>
+                                                    <button type="button" class="btn icon btn-warning"
+                                                        data-bs-toggle="modal" data-bs-target="#editModalScrollable">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </button>
                                                     <a href="#" class="btn icon btn-danger"><i
                                                             class="bi bi-trash"></i></a>
                                                 </td>
@@ -166,7 +172,7 @@
                             </div>
                         @endforeach
                         <div class="px-4">
-                            <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>STambah
+                            <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Tambah
                                 Peminjam</button>
                         </div>
                     </div>
